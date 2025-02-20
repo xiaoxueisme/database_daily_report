@@ -1,0 +1,57 @@
+# WeChat Bot Configuration
+wechat:
+  webhook_url: "https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=fe12d361-024d-45b7-819a-7c1bac0787e1"  # 企业微信机器人webhook地址
+
+# Information Sources
+sources:
+  official_accounts:
+    - name: "阿里云数据库"
+      id: "aliyun_database"
+    - name: "腾讯云数据库"
+      id: "tencent_database"
+    - name: "华为云数据库"
+      id: "huawei_database"
+    - name: "OceanBase数据库"
+      id: "oceanbase"
+    - name: "Oracle数据库"
+      id: "oracle_database"
+    - name: "AWS数据库"
+      id: "aws_database"
+    - name: "数据库技术闲谈"
+      id: "database_chat"
+    - name: "云数据库技术"
+      id: "cloud_database_tech"
+
+  cloud_websites:
+    - name: "阿里云数据库"
+      url: "https://www.aliyun.com/database/"
+    - name: "腾讯云数据库"
+      url: "https://cloud.tencent.com/product/database"
+    - name: "华为云数据库"
+      url: "https://www.huaweicloud.com/product/database.html"
+    - name: "OceanBase"
+      url: "https://www.oceanbase.com/"
+    - name: "Oracle Cloud"
+      url: "https://www.oracle.com/database/"
+    - name: "AWS Database"
+      url: "https://aws.amazon.com/products/databases/"
+
+  expert_blogs:
+    - name: "周振兴的博客"
+      url: "https://www.orczhou.com/"
+      type: "rss"
+    - name: "数据库内核月报"
+      url: "http://mysql.taobao.org/monthly/"
+      type: "web"
+
+# Report Settings
+report:
+  schedule_time: "10:00"
+  max_articles_per_source: 3
+  days_to_look_back: 1
+
+# Logging Configuration
+logging:
+  level: "INFO"
+  file: "logs/daily_report.log"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
